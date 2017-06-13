@@ -17,7 +17,7 @@
 		290632B81EF07C1400B57D28 /* FAPaginationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290632B71EF07C1400B57D28 /* FAPaginationLayout.swift */; };
 		290632C01EF07EA000B57D28 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290632BE1EF07EA000B57D28 /* ImageCell.swift */; };
 		290632C11EF07EA000B57D28 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290632BF1EF07EA000B57D28 /* ImageCell.xib */; };
-		294433B21EF0946D0033BC73 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 294433B11EF0946D0033BC73 /* README.md */; };
+		294433B41EF095980033BC73 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 294433B31EF095980033BC73 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		290632B71EF07C1400B57D28 /* FAPaginationLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAPaginationLayout.swift; sourceTree = "<group>"; };
 		290632BE1EF07EA000B57D28 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		290632BF1EF07EA000B57D28 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
-		294433B11EF0946D0033BC73 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		294433B31EF095980033BC73 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +85,7 @@
 		2906327A1EF07B5700B57D28 = {
 			isa = PBXGroup;
 			children = (
+				294433B31EF095980033BC73 /* README.md */,
 				290632851EF07B5700B57D28 /* FAPaginationLayout */,
 				2906329A1EF07B5800B57D28 /* FAPaginationLayoutTests */,
 				290632A51EF07B5800B57D28 /* FAPaginationLayoutUITests */,
@@ -105,7 +106,6 @@
 		290632851EF07B5700B57D28 /* FAPaginationLayout */ = {
 			isa = PBXGroup;
 			children = (
-				294433B11EF0946D0033BC73 /* README.md */,
 				290632B61EF07BC000B57D28 /* Example-Demo */,
 				290632B51EF07BBE00B57D28 /* Source */,
 			);
@@ -341,7 +341,7 @@
 			files = (
 				290632891EF07B5700B57D28 /* ViewController.swift in Sources */,
 				290632C01EF07EA000B57D28 /* ImageCell.swift in Sources */,
-				294433B21EF0946D0033BC73 /* README.md in Sources */,
+				294433B41EF095980033BC73 /* README.md in Sources */,
 				290632B81EF07C1400B57D28 /* FAPaginationLayout.swift in Sources */,
 				290632871EF07B5700B57D28 /* AppDelegate.swift in Sources */,
 			);
