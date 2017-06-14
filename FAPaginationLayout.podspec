@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'FAPaginationLayout'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Custom pagination layout for collection view.'
 
   s.description      = <<-DESC
-Custom pagination layout for collection view.
+Custom layout for collection view to add pagination.
                        DESC
 
   s.homepage         = 'https://github.com/fahidattique55/FAPaginationLayout'
