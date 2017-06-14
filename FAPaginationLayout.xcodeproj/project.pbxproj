@@ -17,6 +17,7 @@
 		290632B81EF07C1400B57D28 /* FAPaginationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290632B71EF07C1400B57D28 /* FAPaginationLayout.swift */; };
 		290632C01EF07EA000B57D28 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290632BE1EF07EA000B57D28 /* ImageCell.swift */; };
 		290632C11EF07EA000B57D28 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 290632BF1EF07EA000B57D28 /* ImageCell.xib */; };
+		293C83341EF18CC6000CC582 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 293C83331EF18CC6000CC582 /* LICENSE */; };
 		294433B41EF095980033BC73 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 294433B31EF095980033BC73 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		290632B71EF07C1400B57D28 /* FAPaginationLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAPaginationLayout.swift; sourceTree = "<group>"; };
 		290632BE1EF07EA000B57D28 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		290632BF1EF07EA000B57D28 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		293C83331EF18CC6000CC582 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		294433B31EF095980033BC73 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 		2906327A1EF07B5700B57D28 = {
 			isa = PBXGroup;
 			children = (
+				293C83331EF18CC6000CC582 /* LICENSE */,
 				294433B31EF095980033BC73 /* README.md */,
 				290632851EF07B5700B57D28 /* FAPaginationLayout */,
 				2906329A1EF07B5800B57D28 /* FAPaginationLayoutTests */,
@@ -315,6 +318,7 @@
 				290632C11EF07EA000B57D28 /* ImageCell.xib in Resources */,
 				2906328E1EF07B5700B57D28 /* Assets.xcassets in Resources */,
 				2906328C1EF07B5700B57D28 /* Main.storyboard in Resources */,
+				293C83341EF18CC6000CC582 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
