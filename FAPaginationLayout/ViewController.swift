@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         
         collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
         collectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20)
+        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
     }
     
 }
