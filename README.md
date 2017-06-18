@@ -147,8 +147,6 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 ``` collectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20) ```
 
 
-#### Step 3
-
 * Set the collectionView's item size according to collectionView's content insets. 
 
 ```swift 
