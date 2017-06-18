@@ -1,7 +1,6 @@
 ![Alt text](http://i.imgur.com/jWeALpn.png "FAPaginationLayout-Logo")
 
 
-
 <p align="center">
     <a href="http://i.imgur.com/okBPcrM.gif">
         <img src="http://i.imgur.com/okBPcrM.gif" height="450">
@@ -133,6 +132,16 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
 #### Step 2 (Without cell size animation)
 
+
+
+<p align="center">
+    <a href="http://i.imgur.com/b7BZZeQ.gif">
+        <img src="http://i.imgur.com/b7BZZeQ.gif" height="450">
+    </a>
+</p>
+
+
+
 * Set the content insets of collectionView as per your need 
 
 ``` collectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20) ```
@@ -153,6 +162,7 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
     return cellSize
 }
 
+```
 
 
 * Now run the Xcode project and enjoy! 
