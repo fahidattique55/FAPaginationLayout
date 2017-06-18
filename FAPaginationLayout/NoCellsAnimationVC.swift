@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NoCellsAnimationVC.swift
 //  FAPaginationLayout
 //
 //  Created by Fahid Attique on 14/06/2017.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NoCellsAnimationVC: UIViewController {
     
     
-
+    
     //  IBOutlets
     
     @IBOutlet var collectionView: UICollectionView!
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     
-
+    
     //  Private Functions
     
     
@@ -43,36 +43,6 @@ class ViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsetsMake(0, 30, 0, 30)
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
     }
- 
- 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        updateCellsLayout()
-    }
-    
-    func updateCellsLayout()  {
-        
-        let centerX = collectionView.contentOffset.x + (collectionView.frame.size.width)/2
-        for cell in collectionView.visibleCells {
-            
-            var offsetX = centerX - cell.center.x
-            if offsetX < 0 {
-                offsetX *= -1
-            }
-            
-            cell.transform = CGAffineTransform.identity
-            if offsetX > 50 {
-                
-                let offsetPercentage = (offsetX - 50) / view.bounds.width
-                var scaleX = 1-offsetPercentage
-                if scaleX < 0.8 {
-                    scaleX = 0.8
-                }
-                cell.transform = CGAffineTransform(scaleX: scaleX, y: scaleX)
-            }
-        }
-    }
-    
 }
 
 
@@ -83,8 +53,8 @@ class ViewController: UIViewController {
 //  Collection View FlowLayout Delegate & Data Source
 
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-
+extension NoCellsAnimationVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -98,20 +68,16 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         return cell
     }
     
-
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var cellSize: CGSize = collectionView.bounds.size
-
-        cellSize.width -= collectionView.contentInset.left * 2
-        cellSize.width -= collectionView.contentInset.right * 2
+        
+        cellSize.width -= collectionView.contentInset.left
+        cellSize.width -= collectionView.contentInset.right
         cellSize.height = cellSize.width
-
+        
         return cellSize
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        updateCellsLayout()
     }
 }

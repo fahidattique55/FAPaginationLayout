@@ -19,7 +19,8 @@
 
 ## Features
 
-* Animates cell size while scrolling
+* Animate cell size while scrolling
+* Rotate cell while scrolling
 * Adds pagination in your collection view
 * Show users that collection has more cells or data
 * Customizeable with collection view's content insets
@@ -69,7 +70,7 @@ $ pod install
 ![Alt text](http://i.imgur.com/r697FRw.png "FAPaginationLayout-step1")
 
 
-#### Step 2 (For cell size animation while scrolling)
+#### Step 2 (With cells size animation while scrolling)
 
 * Set the contentInsets of collection view,
 
@@ -89,6 +90,7 @@ override func viewWillLayoutSubviews() {
 func updateCellsLayout()  {
 
     let centerX = collectionView.contentOffset.x + (collectionView.frame.size.width)/2
+
     for cell in collectionView.visibleCells {
 
         var offsetX = centerX - cell.center.x
@@ -126,6 +128,74 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 }
 
 ```
+
+
+
+#### Step 2 (With cells rotation animation while scrolling)
+
+
+
+<p align="center">
+    <a href="http://i.imgur.com/P3y67rS.gif">
+        <img src="http://i.imgur.com/P3y67rS.gif" height="450">
+    </a>
+</p>
+
+
+
+* Set the contentInsets of collection view,
+
+``` collectionView.contentInset = UIEdgeInsetsMake(0, 30, 0, 30) ```
+
+
+* Set the collectionView's item size according to collectionView's content insets and scale/animate it accordingly, 
+
+```swift 
+
+
+override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    updateCellsLayout()
+}
+
+func updateCellsLayout()  {
+
+    let centerX = collectionView.contentOffset.x + (collectionView.frame.size.width)/2
+
+    for cell in collectionView.visibleCells {
+
+        var offsetX = centerX - cell.center.x
+        if offsetX < 0 {
+            offsetX *= -1
+        }
+
+        if offsetX > 0 {
+
+            let offsetPercentage = offsetX / view.bounds.width
+            let rotation = 1 - offsetPercentage
+            cell.transform = CGAffineTransform(rotationAngle: rotation - 45)
+        }
+    }
+}
+
+
+func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+    var cellSize: CGSize = collectionView.bounds.size
+
+    cellSize.width -= collectionView.contentInset.left * 2
+    cellSize.width -= collectionView.contentInset.right * 2
+    cellSize.height = cellSize.width
+
+    return cellSize
+}
+
+func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    updateCellsLayout()
+}
+
+```
+
 
 
 
