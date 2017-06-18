@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OHf-ey-urM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FAPaginationLayout-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FAPaginationLayout" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,14 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uuR-1G-tnb">
-                                <rect key="frame" x="0.0" y="183.5" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="161.5" width="375" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="1oG-If-PUU"/>
+                                    <constraint firstAttribute="height" constant="280" id="c3f-MP-wzt"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="QZS-od-pLq" customClass="FAPaginationLayout" customModule="FAPaginationLayout" customModuleProvider="target">
                                     <size key="itemSize" width="50" height="50"/>
@@ -40,34 +39,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="9Zt-UC-fYh"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAPaginationLayout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHs-XX-mDY">
-                                <rect key="frame" x="24" y="57" width="327" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="oTN-wa-dRf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uuR-1G-tnb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WBD-qW-d28"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IHs-XX-mDY" secondAttribute="trailing" constant="8" id="Znx-VG-ChS"/>
-                            <constraint firstAttribute="trailing" secondItem="uuR-1G-tnb" secondAttribute="trailing" id="gPi-Xc-SNe"/>
-                            <constraint firstItem="IHs-XX-mDY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="j8d-FH-CJ3"/>
-                            <constraint firstItem="uuR-1G-tnb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ujU-e4-Z32"/>
-                            <constraint firstItem="uuR-1G-tnb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wd6-St-gbx"/>
-                            <constraint firstItem="uuR-1G-tnb" firstAttribute="top" secondItem="IHs-XX-mDY" secondAttribute="bottom" constant="66.5" id="wsW-n7-9H6"/>
+                            <constraint firstItem="uuR-1G-tnb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ui2-hG-enZ"/>
+                            <constraint firstItem="uuR-1G-tnb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="pQF-u5-1Lk"/>
+                            <constraint firstItem="uuR-1G-tnb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pXj-wI-pE5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="FAPaginationLayout" id="5vz-Ln-faG"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="uuR-1G-tnb" id="HTC-1S-gbS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1144.8" y="39.130434782608695"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1BU-Uj-jqu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OHf-ey-urM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wsH-Ds-V5d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IYH-kA-Fli"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Eo-rN-g5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.59999999999999" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>

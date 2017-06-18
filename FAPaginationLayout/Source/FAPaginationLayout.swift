@@ -33,7 +33,7 @@ public class FAPaginationLayout: UICollectionViewFlowLayout {
             
             let newSize: CGSize  = collectionViewContentSize
             let xOffset: CGFloat = collectionView!.contentOffset.x + (newSize.width - oldSize.width)
-            let newOffset: CGPoint      = CGPoint(x: xOffset, y: collectionView!.contentOffset.y)
+            let newOffset: CGPoint = CGPoint(x: xOffset, y: collectionView!.contentOffset.y)
             collectionView!.contentOffset = newOffset
         }
         else {
@@ -70,6 +70,8 @@ public class FAPaginationLayout: UICollectionViewFlowLayout {
             }
         }
 
-        return CGPoint.init(x: firstAttribute.center.x - collectionView!.bounds.size.width * 0.5, y: proposedContentOffset.y)
+        return CGPoint(x: firstAttribute.center.x - collectionView!.bounds.size.width * 0.5, y: proposedContentOffset.y)
     }
+
+    
 }
