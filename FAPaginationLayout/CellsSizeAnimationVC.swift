@@ -11,7 +11,6 @@ import UIKit
 class CellsSizeAnimationVC: UIViewController {
     
     
-    
     //  IBOutlets
     
     @IBOutlet var collectionView: UICollectionView!
@@ -59,18 +58,10 @@ class CellsSizeAnimationVC: UIViewController {
             if offsetX < 0 {
                 offsetX *= -1
             }
-            
             cell.transform = CGAffineTransform.identity
-            if offsetX > 50 {
-                
-                let offsetPercentage = (offsetX - 50) / view.bounds.width
-                var scaleX = 1-offsetPercentage
-                if scaleX < 0.8 {
-                    scaleX = 0.8
-                }
-                
-                cell.transform = CGAffineTransform(scaleX: scaleX, y: scaleX)
-            }
+            let offsetPercentage = offsetX / (view.bounds.width * 2.7)
+            let scaleX = 1-offsetPercentage
+            cell.transform = CGAffineTransform(scaleX: scaleX, y: scaleX)
         }
     }
     
