@@ -48,30 +48,64 @@ public class FAPaginationLayout: UICollectionViewFlowLayout {
     
     //  configuring the content offsets relative to the scroll velocity
     
+    
+    //  Solution provided by Evyasafmordechai
+    
     override public func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        
         var layoutAttributes: Array = layoutAttributesForElements(in: collectionView!.bounds)!
-        
+
         if layoutAttributes.count == 0 {
             return proposedContentOffset
         }
-        
-        var firstAttribute: UICollectionViewLayoutAttributes = layoutAttributes[0]
-        
-        for attribute: UICollectionViewLayoutAttributes in layoutAttributes {
-            
-            if attribute.representedElementCategory != .cell {
-                continue
-            }
-            
-            if((velocity.x > 0.0 && attribute.center.x > firstAttribute.center.x) ||
-                (velocity.x <= 0.0 && attribute.center.x < firstAttribute.center.x)) {
-                firstAttribute = attribute;
-            }
+        var targetIndex = layoutAttributes.count / 2
+
+        // Skip to the next cell, if there is residual scrolling velocity left.
+        // This helps to prevent glitches
+        let vX = velocity.x
+        if vX > 0 {
+            targetIndex += 1
+        } else if vX < 0 {
+            targetIndex -= 1
         }
 
-        return CGPoint(x: firstAttribute.center.x - collectionView!.bounds.size.width * 0.5, y: proposedContentOffset.y)
+        if targetIndex >= layoutAttributes.count {
+            targetIndex = layoutAttributes.count - 1
+        }
+        if targetIndex < 0 {
+            targetIndex = 0
+        }
+        let targetAttribute = layoutAttributes[targetIndex]
+        return CGPoint(x: targetAttribute.center.x - collectionView!.bounds.size.width * 0.5, y: proposedContentOffset.y)
+
     }
+    
+    
+    //  The below commented code contains a bug in scrolling and tapping while scrolling of cells
+
+//    override public func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+//
+//        var layoutAttributes: Array = layoutAttributesForElements(in: collectionView!.bounds)!
+//
+//        if layoutAttributes.count == 0 {
+//            return proposedContentOffset
+//        }
+//
+//        var firstAttribute: UICollectionViewLayoutAttributes = layoutAttributes[0]
+//
+//        for attribute: UICollectionViewLayoutAttributes in layoutAttributes {
+//
+//            if attribute.representedElementCategory != .cell {
+//                continue
+//            }
+//
+//            if((velocity.x > 0.0 && attribute.center.x > firstAttribute.center.x) ||
+//                (velocity.x <= 0.0 && attribute.center.x < firstAttribute.center.x)) {
+//                firstAttribute = attribute;
+//            }
+//        }
+//
+//        return CGPoint(x: firstAttribute.center.x - collectionView!.bounds.size.width * 0.5, y: proposedContentOffset.y)
+//    }
 
     
 }
