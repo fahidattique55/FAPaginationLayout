@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FAPaginationLayout'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'Custom pagination layout for collection view.'
 
   s.description      = <<-DESC

@@ -53,7 +53,7 @@ class NoCellsAnimationVC: UIViewController {
 //  Collection View FlowLayout Delegate & Data Source
 
 
-extension NoCellsAnimationVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension NoCellsAnimationVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -79,5 +79,9 @@ extension NoCellsAnimationVC: UICollectionViewDataSource, UICollectionViewDelega
         cellSize.height = cellSize.width
         
         return cellSize
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Item selected at \(indexPath.row)")
     }
 }

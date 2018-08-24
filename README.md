@@ -243,3 +243,4 @@ This project is licensed under the  MIT License.
 ## Contributors
 
 **Evyasafmordechai** - https://github.com/Evyasafmordechai 
+**orlandoamorim** - https://github.com/orlandoamorim
