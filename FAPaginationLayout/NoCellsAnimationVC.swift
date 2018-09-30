@@ -40,8 +40,8 @@ class NoCellsAnimationVC: UIViewController {
     private func viewConfigrations() {
         
         collectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "ImageCell")
-        collectionView.contentInset = UIEdgeInsetsMake(0, 30, 0, 30)
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 30, bottom: 0, right: 30)
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
 }
 
