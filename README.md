@@ -13,7 +13,8 @@
 [![Version](https://img.shields.io/cocoapods/v/FAPaginationLayout.svg?style=flat)](http://cocoapods.org/pods/FAPaginationLayout)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)
 [![Platform](https://img.shields.io/cocoapods/p/FAPaginationLayout.svg?style=flat)](http://cocoapods.org/pods/FAPaginationLayout)
-
+[![CocoaPods](https://img.shields.io/cocoapods/dt/FAPaginationLayout.svg)](http://cocoapods.org/pods/FAPaginationLayout)
+[![CocoaPods](https://img.shields.io/cocoapods/at/FAPaginationLayout.svg)](http://cocoapods.org/pods/FAPaginationLayout)
 
 
 
